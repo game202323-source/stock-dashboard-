@@ -112,12 +112,6 @@
   gap: 14px;
 }
 
-@media (max-width: 640px) {
-  .stock-list {
-    grid-template-columns: 1fr;
-  }
-}
-
 .stock-row {
   border: 1px solid #e5e7eb;
   border-radius: 12px;
