@@ -12,6 +12,7 @@ const TICKERS = [
   { name: "ASML", sector: "장비", ticker: "ASML" },
   { name: "어플라이드머티어리얼즈", sector: "장비", ticker: "AMAT" },
   { name: "램리서치", sector: "장비", ticker: "LRCX" },
+  { name: "KLA", sector: "장비", ticker: "KLAC" },
 
   // 데이터센터
   { name: "버티브", sector: "데이터센터", ticker: "VRT" },

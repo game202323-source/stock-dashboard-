@@ -11,13 +11,15 @@ function formatPrice(value, currency) {
 }
 
 function StockRow({ stock }) {
-  const { name, current, target, currency, error } = stock;
+  const { name, ticker, current, target, currency, error } = stock;
 
   if (error || current == null) {
     return (
       <div className="stock-row">
         <div className="stock-header">
-          <span className="stock-name">{name}</span>
+          <span className="stock-name">
+            {name} <span className="stock-ticker">{ticker}</span>
+          </span>
           <span className="badge badge-na">시세 불러오기 실패</span>
         </div>
       </div>
@@ -34,14 +36,16 @@ function StockRow({ stock }) {
   return (
     <div className="stock-row">
       <div className="stock-header">
-        <span className="stock-name">{name}</span>
+        <span className="stock-name">
+          {name} <span className="stock-ticker">{ticker}</span>
+        </span>
         {diffPct == null ? (
           <span className="badge badge-na">컨센서스 없음</span>
         ) : (
           <span className={`badge ${isOver ? "badge-over" : "badge-upside"}`}>
             {isOver
-              ? `목표 초과 ${Math.abs(diffPct).toFixed(1)}%`
-              : `여력 +${diffPct.toFixed(1)}%`}
+              ? `목표가 초과 +${Math.abs(diffPct).toFixed(1)}%`
+              : `여력 ${diffPct.toFixed(1)}%`}
           </span>
         )}
       </div>
