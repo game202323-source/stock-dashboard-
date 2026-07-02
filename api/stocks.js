@@ -1,34 +1,33 @@
 // Vercel 서버리스 함수: Yahoo Finance 비공식 API로 현재가 · 목표주가(애널리스트 컨센서스)를 가져옵니다.
 const TICKERS = [
   // AI반도체
-  { name: "삼성전자", sector: "AI반도체", ticker: "005930.KS" },
-  { name: "SK하이닉스", sector: "AI반도체", ticker: "000660.KS" },
-  { name: "한미반도체", sector: "AI반도체", ticker: "042700.KS" },
-  { name: "DB하이텍", sector: "AI반도체", ticker: "000990.KS" },
-  { name: "리노공업", sector: "AI반도체", ticker: "058470.KQ" },
   { name: "엔비디아", sector: "AI반도체", ticker: "NVDA" },
+  { name: "브로드컴", sector: "AI반도체", ticker: "AVGO" },
+  { name: "AMD", sector: "AI반도체", ticker: "AMD" },
+  { name: "TSMC", sector: "AI반도체", ticker: "TSM" },
+  { name: "마이크론", sector: "AI반도체", ticker: "MU" },
+  { name: "마벨테크놀로지", sector: "AI반도체", ticker: "MRVL" },
 
   // 장비
-  { name: "원익IPS", sector: "장비", ticker: "240810.KQ" },
-  { name: "피에스케이", sector: "장비", ticker: "319660.KQ" },
-  { name: "테스", sector: "장비", ticker: "095610.KQ" },
-  { name: "유진테크", sector: "장비", ticker: "084370.KQ" },
-  { name: "이오테크닉스", sector: "장비", ticker: "039030.KQ" },
   { name: "ASML", sector: "장비", ticker: "ASML" },
+  { name: "어플라이드머티어리얼즈", sector: "장비", ticker: "AMAT" },
+  { name: "램리서치", sector: "장비", ticker: "LRCX" },
 
   // 데이터센터
-  { name: "삼성SDS", sector: "데이터센터", ticker: "018260.KS" },
-  { name: "KT", sector: "데이터센터", ticker: "030200.KS" },
-  { name: "LG유플러스", sector: "데이터센터", ticker: "032640.KS" },
-  { name: "더존비즈온", sector: "데이터센터", ticker: "012510.KS" },
-  { name: "에스넷시스템", sector: "데이터센터", ticker: "234340.KQ" },
+  { name: "버티브", sector: "데이터센터", ticker: "VRT" },
+  { name: "이튼", sector: "데이터센터", ticker: "ETN" },
+  { name: "GE버노바", sector: "데이터센터", ticker: "GEV" },
+  { name: "아리스타네트웍스", sector: "데이터센터", ticker: "ANET" },
+  { name: "에퀴닉스", sector: "데이터센터", ticker: "EQIX" },
+  { name: "컨스텔레이션에너지", sector: "데이터센터", ticker: "CEG" },
 
   // 광통신
-  { name: "코히런트", sector: "광통신", ticker: "COHR" },
   { name: "루멘텀", sector: "광통신", ticker: "LITE" },
+  { name: "코히런트", sector: "광통신", ticker: "COHR" },
   { name: "시에나", sector: "광통신", ticker: "CIEN" },
-  { name: "어플라이드옵토일렉트로닉스", sector: "광통신", ticker: "AAOI" },
+  { name: "코닝", sector: "광통신", ticker: "GLW" },
   { name: "파브리넷", sector: "광통신", ticker: "FN" },
+  { name: "크레도테크놀로지", sector: "광통신", ticker: "CRDO" },
 ];
 
 const UA =

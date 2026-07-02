@@ -107,7 +107,7 @@ function App() {
       <header className="app-header">
         <h1>AI 반도체 밸류체인 대시보드</h1>
         <p className="subtitle">
-          AI반도체 · 장비 · 데이터센터 · 광통신 22개 종목 현재가 &amp; 목표주가
+          AI반도체 · 장비 · 데이터센터 · 광통신 21개 종목 현재가 &amp; 목표주가
         </p>
       </header>
 
