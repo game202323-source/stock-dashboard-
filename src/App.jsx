@@ -1,6 +1,35 @@
 import { useEffect, useState, useMemo, useCallback } from "react";
 import { sectors } from "./data/stocks";
+import marketComments from "./data/marketComments.json";
 import "./App.css";
+
+function formatCommentDate(dateStr) {
+  const [y, m, d] = dateStr.split("-");
+  return `${y}.${m}.${d}`;
+}
+
+function MarketComments() {
+  const sorted = useMemo(
+    () => [...marketComments].sort((a, b) => (a.date < b.date ? 1 : -1)),
+    []
+  );
+
+  if (sorted.length === 0) return null;
+
+  return (
+    <section className="market-comments">
+      <h2 className="section-title">오늘의 시장 코멘트</h2>
+      <ul className="comment-list">
+        {sorted.map((entry) => (
+          <li key={entry.date} className="comment-item">
+            <span className="comment-date">{formatCommentDate(entry.date)}</span>
+            <p className="comment-text">{entry.summary}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
 
 function formatPrice(value, currency) {
   if (value == null) return "-";
@@ -114,6 +143,8 @@ function App() {
           AI반도체 · 장비 · 데이터센터 · 광통신 21개 종목 현재가 &amp; 목표주가
         </p>
       </header>
+
+      <MarketComments />
 
       <nav className="tabs">
         {sectors.map((sector) => (
