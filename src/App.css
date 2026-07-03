@@ -180,11 +180,11 @@
 }
 
 .legend-current {
-  background: #2563eb;
+  background: #111827;
 }
 
 .legend-target {
-  background: #f97316;
+  background: #dc2626;
 }
 
 .stock-list {
@@ -272,11 +272,11 @@
 }
 
 .bar-current {
-  background: #2563eb;
+  background: #111827;
 }
 
 .bar-target {
-  background: #f97316;
+  background: #dc2626;
 }
 
 .bar-value {
