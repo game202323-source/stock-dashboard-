@@ -29,6 +29,29 @@ const TICKERS = [
   { name: "코닝", sector: "광통신", ticker: "GLW" },
   { name: "파브리넷", sector: "광통신", ticker: "FN" },
   { name: "크레도테크놀로지", sector: "광통신", ticker: "CRDO" },
+
+  // 헬스케어
+  { name: "유나이티드헬스그룹", sector: "헬스케어", ticker: "UNH" },
+  { name: "존슨앤드존슨", sector: "헬스케어", ticker: "JNJ" },
+  { name: "애보트래보러토리스", sector: "헬스케어", ticker: "ABT" },
+  { name: "인튜이티브서지컬", sector: "헬스케어", ticker: "ISRG" },
+  { name: "써모피셔사이언티픽", sector: "헬스케어", ticker: "TMO" },
+
+  // 바이오
+  { name: "일라이릴리", sector: "바이오", ticker: "LLY" },
+  { name: "버텍스파마슈티컬스", sector: "바이오", ticker: "VRTX" },
+  { name: "리제네론파마슈티컬스", sector: "바이오", ticker: "REGN" },
+  { name: "암젠", sector: "바이오", ticker: "AMGN" },
+  { name: "길리어드사이언스", sector: "바이오", ticker: "GILD" },
+  { name: "모더나", sector: "바이오", ticker: "MRNA" },
+
+  // 에너지
+  { name: "엑슨모빌", sector: "에너지", ticker: "XOM" },
+  { name: "셰브런", sector: "에너지", ticker: "CVX" },
+  { name: "넥스트에라에너지", sector: "에너지", ticker: "NEE" },
+  { name: "비스트라", sector: "에너지", ticker: "VST" },
+  { name: "탈렌에너지", sector: "에너지", ticker: "TLN" },
+  { name: "카메코", sector: "에너지", ticker: "CCJ" },
 ];
 
 const UA =
