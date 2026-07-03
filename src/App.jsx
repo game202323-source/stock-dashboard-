@@ -23,7 +23,18 @@ function MarketComments() {
         {sorted.map((entry) => (
           <li key={entry.date} className="comment-item">
             <span className="comment-date">{formatCommentDate(entry.date)}</span>
-            <p className="comment-text">{entry.summary}</p>
+            {entry.sections.map((section) => (
+              <div key={section.title} className="comment-section">
+                <h3 className="comment-section-title">{section.title}</h3>
+                <ul className="comment-bullet-list">
+                  {section.items.map((item, i) => (
+                    <li key={i} className="comment-bullet">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </li>
         ))}
       </ul>
