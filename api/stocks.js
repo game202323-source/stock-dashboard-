@@ -8,11 +8,11 @@ const TICKERS = [
   { name: "마이크론", sector: "AI반도체", ticker: "MU" },
   { name: "마벨테크놀로지", sector: "AI반도체", ticker: "MRVL" },
 
-  // 장비
-  { name: "ASML", sector: "장비", ticker: "ASML" },
-  { name: "어플라이드머티어리얼즈", sector: "장비", ticker: "AMAT" },
-  { name: "램리서치", sector: "장비", ticker: "LRCX" },
-  { name: "KLA", sector: "장비", ticker: "KLAC" },
+  // 금융
+  { name: "JP모건체이스", sector: "금융", ticker: "JPM" },
+  { name: "뱅크오브아메리카", sector: "금융", ticker: "BAC" },
+  { name: "골드만삭스", sector: "금융", ticker: "GS" },
+  { name: "모건스탠리", sector: "금융", ticker: "MS" },
 
   // 데이터센터
   { name: "버티브", sector: "데이터센터", ticker: "VRT" },
@@ -45,13 +45,13 @@ const TICKERS = [
   { name: "길리어드사이언스", sector: "바이오", ticker: "GILD" },
   { name: "모더나", sector: "바이오", ticker: "MRNA" },
 
-  // 에너지
-  { name: "엑슨모빌", sector: "에너지", ticker: "XOM" },
-  { name: "셰브런", sector: "에너지", ticker: "CVX" },
-  { name: "넥스트에라에너지", sector: "에너지", ticker: "NEE" },
-  { name: "비스트라", sector: "에너지", ticker: "VST" },
-  { name: "탈렌에너지", sector: "에너지", ticker: "TLN" },
-  { name: "카메코", sector: "에너지", ticker: "CCJ" },
+  // 원자재
+  { name: "프리포트맥모란", sector: "원자재", ticker: "FCX" },
+  { name: "뉴몬트", sector: "원자재", ticker: "NEM" },
+  { name: "린데", sector: "원자재", ticker: "LIN" },
+  { name: "앨버말", sector: "원자재", ticker: "ALB" },
+  { name: "뉴코", sector: "원자재", ticker: "NUE" },
+  { name: "에어프로덕츠", sector: "원자재", ticker: "APD" },
 ];
 
 const UA =
