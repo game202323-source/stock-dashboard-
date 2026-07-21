@@ -9,12 +9,13 @@ function formatCommentDate(dateStr) {
 }
 
 function MarketComments() {
-  const sorted = useMemo(
-    () => [...marketComments].sort((a, b) => (a.date < b.date ? 1 : -1)),
+  const latest = useMemo(
+    () => [...marketComments].sort((a, b) => (a.date < b.date ? 1 : -1))[0],
     []
   );
 
-  if (sorted.length === 0) return null;
+  if (!latest) return null;
+  const sorted = [latest];
 
   return (
     <section className="market-comments">
