@@ -10,7 +10,10 @@ function formatCommentDate(dateStr) {
 
 function MarketComments() {
   const sorted = useMemo(
-    () => [...marketComments].sort((a, b) => (a.date < b.date ? 1 : -1)),
+    () =>
+      [...marketComments]
+        .sort((a, b) => (a.date < b.date ? 1 : -1))
+        .slice(0, 2),
     []
   );
 
